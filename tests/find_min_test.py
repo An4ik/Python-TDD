@@ -3,12 +3,10 @@ from unittest import TestCase
 import find_min as f
 
 
-"""
-Recommend to follow importing order:
-    1. Builtins
-    2. External - Third party libraries you've download
-    3. Internal - Your own modulus, applications, functions etc.
-"""
+# Recommend to follow importing order:
+#    1. Builtins
+#    2. External - Third party libraries you've download
+#    3. Internal - Your own modulus, applications, functions etc
 
 
 class FunctionsTest(TestCase):
