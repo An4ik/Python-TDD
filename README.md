@@ -1,8 +1,10 @@
 # be-fullstack-TDD
 
-Test Driven Development - 
+Test Driven Development (TDD) - is a software development process that relies on the 
+repetition of a very short development cycle: requirements are turned into very 
+specific test cases, then the software is improved to pass the new tests, only.
 
-### How to solve task?
+#### PART-1. FIND_MIN 
 
 1. Look at the file **find_min.py**. 
 
@@ -24,6 +26,8 @@ Fortunately for you I've already created tests. (look at the file **tests/find_m
 7. Commit and push your changes
 
 ___
+
+#### PART-2. FIND_MAX
 
 1. Look at the file **find_max.py**. You will find that there are empty functions.
 
