@@ -1,7 +1,7 @@
 from unittest import TestCase
 
 
-class FunctionsTest(TestCase):
+class FindMaxTest(TestCase):
     def test_get_max(self):
         pass
 

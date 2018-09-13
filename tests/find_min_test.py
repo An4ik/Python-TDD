@@ -9,7 +9,7 @@ import find_min as f
 #    3. Internal - Your own modulus, applications, functions etc
 
 
-class FunctionsTest(TestCase):
+class FindMinTest(TestCase):
     def test_get_min(self):
         result = f.get_min(1, 34)
         self.assertEqual(result, 1)
