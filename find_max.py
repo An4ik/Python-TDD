@@ -39,6 +39,11 @@ def get_max_bounded(*args, low, high):
 
 def make_max(*, low, high):
     def inner(first, *args):
-        pass
+        maximum = float('-inf')
+
+        for arg in (first,) + args:
+            if arg > maximum and low < arg < high:
+                maximum = arg
+        return maximum
 
     return inner
