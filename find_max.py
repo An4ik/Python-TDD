@@ -22,7 +22,11 @@ def get_max_with_many_arguments(*args):
 
 
 def get_max_with_one_or_more_arguments(first, *args):
-    pass
+    maximum = float('-inf')
+    for arg in (first,)+args:
+        if arg > maximum:
+            maximum = arg
+    return maximum
 
 
 def get_max_bounded(*args, low, high):
