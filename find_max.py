@@ -6,7 +6,7 @@ def get_max(a, b):
 
 
 def get_max_without_arguments():
-    pass
+    raise TypeError("At least 1 argument must be given");
 
 
 def get_max_with_one_argument(a):
