@@ -20,7 +20,7 @@ def get_min_with_one_argument(x):
     """
         return that value
     """
-
+    return x
 
 def get_min_with_many_arguments(*args):
     """
