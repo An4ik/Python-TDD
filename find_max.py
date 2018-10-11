@@ -5,8 +5,8 @@ def get_max(a, b):
 
     if a > b:
         return a
-    else:
-        return b
+
+    return b
 
 
 def get_max_without_arguments():
@@ -14,7 +14,7 @@ def get_max_without_arguments():
         raise TypeError exception with message
     """
 
-    raise TypeError("No argument error")
+    raise TypeError("No argument error...")
 
 
 def get_max_with_one_argument(a):
@@ -30,13 +30,13 @@ def get_max_with_many_arguments(*args):
         return largest number among args
     """
 
-    maxNumber = float('-inf')
+    max_number = float('-inf')
 
     for arg in args:
-        if arg > maxNumber:
-            maxNumber = arg
+        if arg > max_number:
+            max_number = arg
 
-    return maxNumber
+    return max_number
 
 
 def get_max_with_one_or_more_arguments(first, *args):
@@ -44,13 +44,13 @@ def get_max_with_one_or_more_arguments(first, *args):
         return largest number among first + args
     """
 
-    maxNumber = float('-inf')
+    max_number = float('-inf')
 
     for arg in (first, *args):
-        if arg > maxNumber:
-            maxNumber = arg
+        if arg > max_number:
+            max_number = arg
 
-    return maxNumber
+    return max_number
 
 
 def get_max_bounded(*args, low, high):
@@ -58,13 +58,13 @@ def get_max_bounded(*args, low, high):
         return largest number among args bounded by low & high
     """
 
-    maxNumber = float('-inf')
+    max_number = float('-inf')
 
     for arg in args:
-        if arg > maxNumber and (low < arg and arg < high):
-            maxNumber = arg
+        if arg > max_number and (low < arg and arg < high):
+            max_number = arg
 
-    return maxNumber
+    return max_number
 
 
 def make_max(*, low, high):
@@ -76,11 +76,11 @@ def make_max(*, low, high):
     """
 
     def inner(first, *args):
-        maxNumber = float('-inf')
+        max_number = float('-inf')
 
         for arg in (first, *args):
-            if arg > maxNumber and (arg > low and arg < high):
-                maxNumber = arg
-        return maxNumber
+            if arg > max_number and (arg > low and arg < high):
+                max_number = arg
+        return max_number
 
     return inner
