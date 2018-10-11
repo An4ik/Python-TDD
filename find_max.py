@@ -30,7 +30,11 @@ def get_max_with_one_or_more_arguments(first, *args):
 
 
 def get_max_bounded(*args, low, high):
-    pass
+    maximum = float('-inf')
+    for arg in args:
+        if arg > maximum and low < arg < high:
+            maximum = arg
+    return maximum
 
 
 def make_max(*, low, high):
