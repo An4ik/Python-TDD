@@ -64,6 +64,11 @@ def make_min(*, low, high):
     """
 
     def inner(first, *args):
-        pass
+        minimum = float('inf')
+
+        for arg in (first,) + args:
+            if arg < minimum and low < arg < high:
+                minimum = arg
+        return minimum
 
     return inner
