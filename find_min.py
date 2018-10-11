@@ -48,6 +48,11 @@ def get_min_bounded(*args, low, high):
     """
         return smallest number among args bounded by low & high
     """
+    minimum = float('inf')
+    for arg in args:
+        if arg < minimum and low < arg < high:
+            minimum = arg
+    return minimum
 
 
 def make_min(*, low, high):
