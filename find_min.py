@@ -1,5 +1,3 @@
-
-
 def get_min(a, b):
     """
         return min number among a and b
