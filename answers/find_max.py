@@ -78,7 +78,7 @@ def make_max(*, low, high):
         for arg in (first, *args):
             if arg > max_number and (arg > low and arg < high):
                 max_number = arg
-                
+
         return max_number
 
     return inner

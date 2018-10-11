@@ -3,10 +3,7 @@ def get_min(a, b):
         return min number among a and b
     """
 
-    if a < b:
-        return a
-
-    return b
+    return a if a < b else b
 
 
 def get_min_without_arguments():
@@ -14,7 +11,7 @@ def get_min_without_arguments():
         raise TypeError exception with message
     """
 
-    raise TypeError("No argument error...")
+    raise TypeError("No argument error.")
 
 
 def get_min_with_one_argument(x):
@@ -52,6 +49,7 @@ def get_min_with_one_or_more_arguments(first, *args):
 
     return min_number
 
+
 def get_min_bounded(*args, low, high):
     """
         return smallest number among args bounded by low & high
@@ -64,7 +62,6 @@ def get_min_bounded(*args, low, high):
             min_number = arg
 
     return min_number
-
 
 
 def make_min(*, low, high):
@@ -81,6 +78,7 @@ def make_min(*, low, high):
         for arg in (first, *args):
             if arg < min_number and (arg > low and arg < high):
                 min_number = arg
+
         return min_number
 
     return inner
