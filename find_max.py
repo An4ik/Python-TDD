@@ -10,7 +10,7 @@ def get_max_without_arguments():
 
 
 def get_max_with_one_argument(a):
-    pass
+    return a
 
 
 def get_max_with_many_arguments(*args):
