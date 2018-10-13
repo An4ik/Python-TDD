@@ -2,6 +2,7 @@ def get_min(a, b):
     """
         return min number among a and b
     """
+
     return a if a < b else b
 
 
@@ -9,13 +10,15 @@ def get_min_without_arguments():
     """
         raise TypeError exception with message
     """
-    raise TypeError('missed arguments')
+
+    raise TypeError("No argument error.")
 
 
 def get_min_with_one_argument(x):
     """
         return that value
     """
+
     return x
 
 
@@ -23,33 +26,42 @@ def get_min_with_many_arguments(*args):
     """
         return smallest number among args
     """
-    result = float('inf')
+
+    min_number = float('inf')
+
     for arg in args:
-        if arg < result:
-            result = arg
-    return result
+        if arg < min_number:
+            min_number = arg
+
+    return min_number
 
 
 def get_min_with_one_or_more_arguments(first, *args):
     """
         return smallest number among first + args
     """
-    result = float('inf')
-    for arg in (first,) + args:
-        if arg < result:
-            result = arg
-    return result
+
+    min_number = float('inf')
+
+    for arg in (first, *args):
+        if arg < min_number:
+            min_number = arg
+
+    return min_number
 
 
 def get_min_bounded(*args, low, high):
     """
         return smallest number among args bounded by low & high
     """
-    res = float('inf')
+
+    min_number = float('Inf')
+
     for arg in args:
-        if arg < res and low < arg < high:
-            res = arg
-    return res
+        if arg < min_number and (low < arg and arg < high):
+            min_number = arg
+
+    return min_number
 
 
 def make_min(*, low, high):
@@ -61,11 +73,12 @@ def make_min(*, low, high):
     """
 
     def inner(first, *args):
-        result = float('inf')
+        min_number = float('inf')
 
-        for arg in (first,) + args:
-            if arg < result and low < arg < high:
-                result = arg
-        return result
+        for arg in (first, *args):
+            if arg < min_number and (arg > low and arg < high):
+                min_number = arg
+
+        return min_number
 
     return inner
