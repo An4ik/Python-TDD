@@ -7,3 +7,6 @@
 
 # PyCharm config file
 /.idea
+
+# VSCode config file
+/.vscode
