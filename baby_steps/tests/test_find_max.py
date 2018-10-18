@@ -1,6 +1,7 @@
 from unittest import TestCase
 
-import find_max as f
+from baby_steps import find_max as f
+
 
 class FindMaxTest(TestCase):
     def test_get_max(self):

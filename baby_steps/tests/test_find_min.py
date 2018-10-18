@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-import find_min as f
+from baby_steps import find_min as f
 
 
 # Recommend to follow importing order:
