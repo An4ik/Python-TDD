@@ -9,4 +9,4 @@ TODO:
 
 Description steps etc.
 
-1. Baby-steps
+1. Baby-steps [instruction](baby_steps/instruction.md)
