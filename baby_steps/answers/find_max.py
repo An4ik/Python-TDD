@@ -1,6 +1,14 @@
+"""
+Here I've written my version of implementation. So you can learn it.
+Hope that you will find some interesting things.
+
+Best regards!
+"""
+
+
 def get_max(a, b):
     """
-        return max number among a and b
+    Returns max number among a and b.
     """
 
     return a if a > b else b
@@ -8,15 +16,15 @@ def get_max(a, b):
 
 def get_max_without_arguments():
     """
-        raise TypeError exception with message
+    Raise TypeError exception with message as an argument.
     """
 
-    raise TypeError("No argument error.")
+    raise TypeError("There is no argument, so it's not possible to find max value.")
 
 
 def get_max_with_one_argument(a):
     """
-        return that value
+    Returns that value.
     """
 
     return a
@@ -24,7 +32,7 @@ def get_max_with_one_argument(a):
 
 def get_max_with_many_arguments(*args):
     """
-        return largest number among args
+    Return the largest number among args.
     """
 
     max_number = float('-inf')
@@ -38,7 +46,7 @@ def get_max_with_many_arguments(*args):
 
 def get_max_with_one_or_more_arguments(first, *args):
     """
-        return largest number among first + args
+    Returns the largest number among first and args.
     """
 
     max_number = float('-inf')
@@ -52,7 +60,7 @@ def get_max_with_one_or_more_arguments(first, *args):
 
 def get_max_bounded(*args, low, high):
     """
-        return largest number among args bounded by low & high
+    Returns the largest number among args bounded by low & high.
     """
 
     max_number = float('-inf')
@@ -66,10 +74,10 @@ def get_max_bounded(*args, low, high):
 
 def make_max(*, low, high):
     """
-        return inner function object which takes at last one argument
-        and return largest number amount it's arguments, but if the
-        largest number is larger than the 'high' which given as required
-        argument the inner function has to return it.
+    Returns an inner function object which takes at last one argument
+    and return largest number amount it's arguments, but if the
+    largest number is larger than the 'high' which given as required
+    argument the inner function has to return it.
     """
 
     def inner(first, *args):
