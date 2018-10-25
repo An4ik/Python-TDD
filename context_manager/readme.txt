@@ -18,8 +18,8 @@ form contextlib import context     #We use this context manager decorator to dec
 
 # Code with Context Manager
 
-    with open(filename, 'w') as f:                          #Here we are open file class and pass in the filename, f is a file object. 
-       	f.write('write with context manager done!')         #We can just work with this in any way. We write some text into the file.
+    with open(filename, 'w') as f:                     #Here we are open file class and pass in the filename, f is a file object. 
+       	f.write('write with context manager done!')    #We can just work with this in any way. We write some text into the file.
 
 
 #2 Same example
@@ -31,7 +31,7 @@ def open_file(file, mode):
     f.close()
 
 def check_open_file(filename):
-    with open_file(filename, 'w') as f:                   # We can refer to opened file as f due to yield f in context manager.
+    with open_file(filename, 'w') as f:       # We can refer to opened file as f due to yield f in context manager.
         f.write('Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
     print(f.closed)
 
