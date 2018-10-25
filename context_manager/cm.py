@@ -11,6 +11,11 @@ def simple_open_and_write_without_context_manager(filename):
     f = open(filename ,'w')
     f.write('simple open and write done!')
     f.close()
+    if(f.closed):
+        return True
+    else:
+        return False
+
     
 def simple_open_and_write_with_context_manager(filename):
     '''
@@ -19,7 +24,10 @@ def simple_open_and_write_with_context_manager(filename):
     '''
     with open(filename, 'w') as f:
         f.write('write with context manager done!')
-        
+    if(f.closed):
+        return True
+    else:
+        return False
         
 
 
