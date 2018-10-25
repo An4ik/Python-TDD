@@ -1,0 +1,1 @@
+`python3 -m unittest tests/classmethods_staticmethods_property_test.py`
