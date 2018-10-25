@@ -1,5 +1,5 @@
 Context managers allow us to properly manage resources so that we can specify exactly what we want to set up and tear down when working with certain objects.
-We can tell that we are using context manager becouse of the with statemant.
+We can understand that is the Context Manager by keyword-'with'.
 Context Manager great for files, but it`s useful for so many different resources. So for example we could use this to connect to and close database. 
 
 There are 2 options to work with methods. One of this by usig a class, second one is by using function with decorater.
