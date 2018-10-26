@@ -33,4 +33,25 @@ def check_open_file(filename):
         f.write('Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
     print(f.closed)
 
+
+So let's say that we we are using Python to do some work in a lot of different directories. We're seeding into those directories doing some work 
+and then seeding back to where we started. For that we initially import os  and from contextlib import contextmanager then we are setting CWD variable to our current 
+working directory: cwd = os.getcwd() Now we are changing to the directory where we want to do some work: os.chdir(filename). Then we are listing out everything 
+in that directory with os.listdir() method and just printing it and we're changing directory back to our original current os.chdir(cwd). 
+We're doing this multiple times whenever we want to do this again:
+cwd = os.getcwd()
+os.chdir(filename)
+print(os.listdir())
+os.chdir(cwd)
+
+ So if we run the code we can see that this works fine, it displays all files that are located in the directory. But this is a little inconvenient to save 
+our current directory, switch directories and then switch back to the original after we're done doing what we need to do. So these are things that we don't want to 
+have to remember to do each time. So let's create context manager with a generator function that does this. First We use the context manager decorator: @contextmanager.
+We are getting our current working directory, and then we want to change directory to this destination, for this we create function called change_directory that  
+takes destination as a parameter -> def change_directory(destination). In order to catch errors we put our setup in a try and a our teardown in a finally. 
+With setup we will save the current directory that we are in into that CWD variable: cwd = os.getcwd(). Now we change directory to our destination: os.chdir(destination).
+We are done with our setup, so now we can just yield.  In the finally block we just change directory back to the original: os.chdir(cwd). 
+with change_directory(filename):
+    print(os.listdir())
+And now we just call function and print out. We can do it multiple times with directories that we want.
         
