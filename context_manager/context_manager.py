@@ -49,8 +49,8 @@ def check_open_file(filename):
 
 def change_dir_without_context_manager(filename1, filename2):
     '''
-	Give list1 the list of files in filename1.
-	Give list2 the list of files in filename2.
+	Give list1 the list of files in file_one.
+	Give list2 the list of files in file_two.
 	Use os, getcwd, chdir
     '''
     return list1 + list2

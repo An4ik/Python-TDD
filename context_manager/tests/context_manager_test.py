@@ -1,6 +1,6 @@
 from unittest import TestCase
 import os
-import cm as f
+import cantext_manager as f
 
 class ContextManagerTest(TestCase):
     def test_simple_without(self):
