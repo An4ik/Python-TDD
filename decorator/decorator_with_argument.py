@@ -1,6 +1,6 @@
 from functools import partial
 """
-This decorator takes a prefix as an argument and adds to function's return this prefix.
+This decorator takes a prefix as an argument and adds to function's return value this prefix.
 """
 def print_result_with_prefix(func=None, *, prefix=''):
 	""" 
