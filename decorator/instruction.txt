@@ -32,4 +32,4 @@ Whee!
 
 7. Good! Now you know basics about decorators. Commit and push your changes. 
 
-8. Now, do all this steps for file called decorator_with_argument.py
+8. Now, do all this steps for file called decorator_with_argument.py and decorator_with_positional_argument.py
