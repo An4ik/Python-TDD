@@ -19,6 +19,8 @@ class BruteForceFibonacci(object):
 
     def get_number(self, n):
         """
+        Returns n-th number of fibonacci numbers.
+
         :param n: n-th number of fibonacci numbers
         :rtype: int
         :return: fibonacci number

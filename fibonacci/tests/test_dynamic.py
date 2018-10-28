@@ -3,15 +3,15 @@ from unittest import TestCase
 from fibonacci.dynamic import Fibonacci
 
 
-class DynamicFibonacciTest(TestCase):
+class FibonacciTest(TestCase):
 
     def test_with_one_argument(self):
         """
         It should be possible to compute the Fibonacci number with one argument which is the value.
         """
         fib = Fibonacci()
-        result = fib.get_number(34)
-        self.assertEqual(result, 5702887)
+        result = fib.get_number(2)
+        self.assertEqual(result, 1)
 
     def test_with_zero_argument(self):
         """

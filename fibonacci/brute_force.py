@@ -5,7 +5,7 @@ The simplest is the series 1, 1, 2, 3, 5, 8, etc.
 """
 
 
-class Fibonacci(object):
+class Fibonacci:
     """
 
     """
@@ -21,7 +21,7 @@ class Fibonacci(object):
 
     def get_number(self, n):
         """
-        Return n-th number from fibonacci numbers.
+        Returns n-th number of fibonacci numbers.
 
         :param n: n-th number.
 

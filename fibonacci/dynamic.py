@@ -1,30 +1,25 @@
 """
-
+Fibanacci implementation using dynamic programming.
 """
 
 
-class Fibonacci(object):
-    """
-    In this DynamicFibonacci class, we realized dynamic implementation.
-    """
+class Fibonacci:
 
     def __init__(self):
         """
-        __init__ method can be called as constructor on other languages. Interpretator called when you create an
-        instance.
-
-        Here you need initialize some dictionary variable which will be store values of fibonacci.
+        Attributes:
+            - numbers - list storing fibonacci numbers by index (n-th index stores n-th number).
         """
 
     def get_number(self, n):
         """
+        Returns n-th number of fibonacci numbers.
+
+        Iterates through the range(2, n + 1) and dynamically find i-th number by storing previous numbers
+        in self.numbers. By this way we avoid recalculating previous numbers.
+
         :param n: n-th number of fibonacci numbers
-        :rtype: int
+
         :return: fibonacci number
-
-        Dynamic programming is a way to solve complex problems, breaking them down into simpler subtasks.
-
-        You must determine the number n is negative or positive. If the number is negative, then you need to raise the error.
-        After that you need to create two initial variables which is equal to 0 and 1 or you can use dictionary created above.
-        Now you need for one iteration to calculate the Fibonacci number using this formula [(i - 1) + (i - 2)] using previously created variables.
+        :rtype: int
         """

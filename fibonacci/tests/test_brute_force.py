@@ -3,7 +3,7 @@ from unittest import TestCase
 from fibonacci.brute_force import Fibonacci
 
 
-class BruteForceFibonacciTest(TestCase):
+class FibonacciTest(TestCase):
 
     def test_with_one_argument(self):
         """
