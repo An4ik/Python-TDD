@@ -17,9 +17,8 @@ class DynamicFibonacci(object):
 
         Here you need initialize some dictionary variable which will be store values of fibonacci.
         """
-        pass
 
-    def dynamic_implementation(self, n):
+    def get_number(self, n):
         """
         :param n: n-th number of fibonacci numbers
         :rtype: int
@@ -31,6 +30,3 @@ class DynamicFibonacci(object):
         After that you need to create two initial variables which is equal to 0 and 1 or you can use dictionary created above.
         Now you need for one iteration to calculate the Fibonacci number using this formula [(i - 1) + (i - 2)] using previously created variables.
         """
-        pass
-
-    

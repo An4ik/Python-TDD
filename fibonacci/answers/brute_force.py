@@ -17,7 +17,7 @@ class BruteForceFibonacci(object):
         """
         self.cache = {}
 
-    def recursive_implementation(self, n):
+    def get_number(self, n):
         """
         :param n: n-th number of fibonacci numbers
         :rtype: int
@@ -35,7 +35,7 @@ class BruteForceFibonacci(object):
             ans = 1
             self.cache[n] = ans
         else:
-            ans = self.recursive_implementation(n - 2) + self.recursive_implementation(n - 1)
+            ans = self.get_number(n - 2) + self.get_number(n - 1)
             self.cache[n] = ans
 
         return ans

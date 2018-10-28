@@ -19,7 +19,7 @@ class BruteForceFibonacci(object):
         """
         pass
 
-    def recursive_implementation(self, n):
+    def get_number(self, n):
         """
         :param n: n-th number of fibonacci numbers
         :rtype: int
