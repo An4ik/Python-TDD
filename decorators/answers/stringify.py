@@ -1,27 +1,36 @@
-def stringify(function):
+def stringify(func):
     """
     Takes a function as an argument and changes it's return type to string.
+
+    :param func: decorated function
+
+    :return inner function object
+    :rtype function
     """
 
     def inner(*args):
         """
-        Change return type of function given as stringify argument to string.
+        Calls 'func' and convert it's result type into a string.
         """
-        return str(function(*args))
+        result = func(*args)
+        return str(result)
 
     return inner
 
 
-def add_numbers(first_number, second_number):
+@stringify
+def add(a, b):
     """
-    Return the sum of two numbers.
-    """
-    return first_number + second_number
-
-
-def multiply_numbers(first_number, second_number):
-    """
-    Return the multiplication of two numbers.
+    Returns the sum of two numbers.
     """
 
-    return first_number * second_number
+    return a + b
+
+
+@stringify
+def multiply(a, b):
+    """
+    Returns the multiplication of two numbers.
+    """
+
+    return a * b
