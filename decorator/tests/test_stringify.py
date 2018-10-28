@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from decorators.stringify import add, multiply
+from decorator.stringify import add, multiply
 
 
 class StringifyTestCase(TestCase):
