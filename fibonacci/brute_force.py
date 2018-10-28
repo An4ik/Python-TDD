@@ -1,30 +1,23 @@
 """
-Fibonacci number.
-Fibonacci number a series of numbers in which each number ( Fibonacci number ) is the sum of the two previous numbers.
-The simplest is the series 1, 1, 2, 3, 5, 8, etc.
+Fibanacci implementation using recursive method.
 """
 
 
-class Fibonacci:
-    """
-
-    """
-
-    def __init__(self):
-        """
-        __init__ method can be called as constructor on other languages. Interpretator called when you create an
-        instance.
-
-        Here you need to initialize some dictionary variable which will be store values of fibonacci.
-        """
-        pass
+class Fibonacci(object):
 
     def get_number(self, n):
         """
         Returns n-th number of fibonacci numbers.
 
-        :param n: n-th number.
-
+        :param n: n-th number of fibonacci numbers
         :rtype: int
         :return: fibonacci number
         """
+
+        if n < 0:
+            raise TypeError('Please, enter positive number.')
+
+        if n <= 2:
+            return 1 if n == 2 else 0
+
+        return self.get_number(n - 2) + self.get_number(n - 1)
