@@ -3,7 +3,7 @@ Fibanacci implementation using recursive method.
 """
 
 
-class Fibonacci(object):
+class Fibonacci:
 
     def get_number(self, n):
         """
