@@ -3,60 +3,41 @@ from unittest import TestCase
 from fibonacci.dynamic import Fibonacci
 
 
-class FibonacciTest(TestCase):
+class FibonacciTestCase(TestCase):
 
-    def test_with_one_argument(self):
+    def setUp(self):
         """
-        It should be possible to compute the Fibonacci number with one argument which is the value.
+        Called for every test function.
+        Actually it's we should have here common things.
         """
-        fib = Fibonacci()
-        result = fib.get_number(2)
-        self.assertEqual(result, 1)
 
-    def test_with_zero_argument(self):
+        self.fib = Fibonacci()
+
+    def test_the_first_number(self):
         """
-        It should be possible to compute the Fibonacci number with value 0.
+        The first number of the fibonacci numbers is 0.
         """
-        fib = Fibonacci()
-        result = fib.get_number(0)
-        self.assertEqual(result, 0)
+        result = self.fib.get_number(1)
+        self.assertEqual(result, 0, 'The first number is 0, not %s' % result)
+
+    def test_the_second_number(self):
+        """
+        The first number of the fibonacci numbers is 1.
+        """
+        result = self.fib.get_number(2)
+        self.assertEqual(result, 1, 'The second number is 1, not %s' % result)
+
+    def test_the_third_number(self):
+        """
+        The third number of the fibonacci numbers is 1.
+        """
+        result = self.fib.get_number(3)
+        self.assertEqual(result, 1, 'The third number is 1, not %s' % result)
 
     def test_with_long_argument(self):
-        fib = Fibonacci()
-        result = fib.get_number(343)
-        self.assertEqual(result, 215414832505658809004682396169711233230800418578767753330908886771798637)
+        result = self.fib.get_number(100)
+        self.assertEqual(result, 218922995834555169026)
 
     def test_with_negative_number(self):
-        fib = Fibonacci()
         with self.assertRaises(TypeError):
-            fib.get_number(-14234)
-
-    def test_with_string_argument(self):
-        fib = Fibonacci()
-        with self.assertRaises(TypeError):
-            fib.get_number('aasd')
-
-    def test_with_list_argument(self):
-        fib = Fibonacci()
-        with self.assertRaises(TypeError):
-            fib.get_number([1, 2])
-
-    def test_with_dictionary_argument(self):
-        fib = Fibonacci()
-        with self.assertRaises(TypeError):
-            fib.get_number({2: 'Cannot stop'})
-
-    def test_with_tuple_argument(self):
-        fib = Fibonacci()
-        with self.assertRaises(TypeError):
-            fib.get_number((23, 123, 123))
-
-    def test_with_many_arguments(self):
-        fib = Fibonacci()
-        with self.assertRaises(TypeError):
-            fib.get_number(1, 2)
-
-    def test_without_arguments(self):
-        fib = Fibonacci()
-        with self.assertRaises(TypeError):
-            fib.get_number()
+            self.fib.get_number(-10)
