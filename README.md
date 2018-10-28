@@ -10,3 +10,4 @@ TODO:
 Description steps etc.
 
 1. Baby-steps [instruction](baby_steps/instruction.md)
+1. Basic math operations [instruction](basic_math_operations/instruction.md)
