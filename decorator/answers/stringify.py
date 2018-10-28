@@ -21,7 +21,7 @@ def stringify(func):
 @stringify
 def add(a, b):
     """
-    Returns the sum of two numbers.
+    Decorated function which returns the sum of two numbers.
     """
 
     return a + b
@@ -30,7 +30,7 @@ def add(a, b):
 @stringify
 def multiply(a, b):
     """
-    Returns the multiplication of two numbers.
+    Decorated function which returns the multiplication of two numbers.
     """
 
     return a * b

@@ -4,7 +4,7 @@ def stringify(func):
 
     :param func: decorated function
 
-    :return inner function object
+    :return inner function
     :rtype function
     """
 
@@ -12,25 +12,15 @@ def stringify(func):
         """
         Calls 'func' and convert it's result type into a string.
         """
-        result = func(*args)
-        return str(result)
-
-    return inner
 
 
-@stringify
 def add(a, b):
     """
-    Returns the sum of two numbers.
+    Decorated function which returns the sum of two numbers.
     """
 
-    return a + b
 
-
-@stringify
 def multiply(a, b):
     """
-    Returns the multiplication of two numbers.
+    Decorated function which returns the multiplication of two numbers.
     """
-
-    return a * b
