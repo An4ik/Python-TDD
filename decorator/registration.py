@@ -14,19 +14,14 @@ def register(is_active=True):
     def decorate(func):
         pass
 
-    return decorate
 
-
-@register(is_active=True)
 def subject_1():
     pass
 
 
-@register(is_active=False)
 def subject_2():
     pass
 
 
-@register(is_active=True)
 def subject_3():
     pass
