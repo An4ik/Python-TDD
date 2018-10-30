@@ -12,3 +12,4 @@ Description steps etc.
 1. Baby-steps [instruction](baby_steps/instruction.md)
 2. Basic math operations [instruction](basic_math_operations/instruction.md)
 3. Fibonacci numbers [instruction](fibonacci/instruction.md)
+4. Decorators [instruction](decorator/instruction.md)
