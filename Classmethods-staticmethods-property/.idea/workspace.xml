@@ -90,7 +90,7 @@
     <session id="729427820">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="13" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.17" value="1" />
@@ -508,7 +508,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Version Control" order="6" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32789558" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4984326" visible="true" weight="0.22022839" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.4984326" visible="true" weight="0.5905383" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5015674" side_tool="true" weight="0.3425775" />
       <window_info anchor="bottom" id="Python Console" order="10" weight="0.32789558" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />

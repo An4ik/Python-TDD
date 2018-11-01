@@ -2,13 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b2da1f51-223f-490d-b78d-7c8b0b73a6e4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/be-fullstack-TDD.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/.idea/Classmethods-staticmethods-property.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/answers/classmethods.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/answers/property.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/answers/staticmethods.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/classmethods.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/property.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/staticmethods.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/tests/test_classmethods.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/tests/test_staticmethods.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classmethods-staticmethods-property/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classmethods-staticmethods-property/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classmethods-staticmethods-property/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Classmethods-staticmethods-property/README2.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Classmethods-staticmethods-property/answers/classmethods_staticmethods_property.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Classmethods-staticmethods-property/classmethods_staticmethods_property.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Classmethods-staticmethods-property/tests/classmethods_staticmethods_property_test.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Classmethods-staticmethods-property/tests/classmethods_staticmethods_property_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Classmethods-staticmethods-property/tests/test_property.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/find_min.py" beforeDir="false" afterPath="$PROJECT_DIR$/find_min.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -70,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/answers/find_min.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            <state relative-caret-position="119">
+              <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -200,7 +214,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -211,7 +225,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32952693" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -292,8 +306,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/answers/find_min.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        <state relative-caret-position="119">
+          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
         </state>
       </provider>
     </entry>
