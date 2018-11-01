@@ -4,7 +4,7 @@ def get_min(a, b):
         return min number among a and b
     """
     if a<b: return a
-    else: return  b
+    else: return b
 
 def get_min_without_arguments():
     """
@@ -16,8 +16,7 @@ def get_min_with_one_argument(x):
     """
         return that value
     """
-    return x;
-
+    return x
 
 def get_min_with_many_arguments(*args):
     """
