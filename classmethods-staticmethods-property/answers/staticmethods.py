@@ -42,7 +42,7 @@ class Book:
         return ' '.join(sentence.split()[::-1])
 
     @staticmethod
-    def concatenate_books_dict_in_new_one(*dicts):
+    def concatenate_book_dicts_in_new_one(*dicts):
         """
         Takes 0 or more book dictionaries and concatenates it in new one dictionary
         :param dicts: book dictionaries, in which key is author of a book and value is name of the book

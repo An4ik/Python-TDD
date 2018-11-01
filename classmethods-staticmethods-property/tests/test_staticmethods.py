@@ -17,7 +17,7 @@ class StaticmethodsTest(TestCase):
         sentence_reverse_word_order = Book.reverse_word_order_of_sentence(sentence)
         self.assertEqual(sentence_reverse_word_order, 'amet sit dolor ipsum Lorem')
 
-    def test_staticmethod_concatenate_books_dict_in_new_one(self):
+    def test_staticmethod_concatenate_book_dicts_in_new_one(self):
         books_dict1 = {'Chuck Palahniuk': 'Fight club', 'Antoine de Saint-Exupery': 'The Little Prince'}
         books_dict2 = {'Gregory David Roberts': 'Shantaram', 'A Study in Scarlet': 'Arthur Conan Doyle'}
         books_dict3 = {'The Lord of the Rings': 'J. R. R. Tolkien'}
