@@ -1,0 +1,12 @@
+# Compiled files
+*.pyc
+
+# virtual environments
+/.venv
+/.env
+
+# PyCharm config file
+/.idea
+
+# VSCode config file
+/.vscode
