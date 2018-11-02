@@ -52,7 +52,7 @@ P.S. Don't be upset, if not everything is clear. Google will help you
       
             `python3 -m unittest tests/test_classmethods.py`
                            
-       You will see that it ran 1 test and all of them FAILED (failures=1).
+       You will see that it ran 2 test and all of them FAILED (failures=2).
     4. Now, complete that functions in classmethods.py.
     5. Run tests (step 3) and all of them should be passed.
     6. Compare your answer with mine located in answers/classmethods.py.
