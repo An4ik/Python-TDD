@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Baby steps &mdash; Python-TDD 0.0.1 documentation</title>
+  <title>Magic functions &mdash; Python-TDD 0.0.1 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Magic functions" href="magic_functions.html" />
-    <link rel="prev" title="Hello Python, Hi TDD!" href="introduction.html" /> 
+    <link rel="next" title="Fibonacci numbers" href="fibonacci_numbers.html" />
+    <link rel="prev" title="Baby steps" href="baby_steps.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -80,12 +80,11 @@
             
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Hello Python, Hi TDD!</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Baby steps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#find-minimum">Find minimum.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#find-maximum">Find maximum.</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baby_steps.html">Baby steps</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Magic functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#number">Number</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="magic_functions.html">Magic functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fibonacci_numbers.html">Fibonacci numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decorators.html">Decorators</a></li>
 </ul>
@@ -133,13 +132,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Baby steps</li>
+      <li>Magic functions</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/baby_steps.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/magic_functions.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -152,59 +151,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="baby-steps">
-<h1>Baby steps<a class="headerlink" href="#baby-steps" title="Permalink to this headline">¶</a></h1>
-<p>Here we have description. bla bla bla.</p>
-<p><strong>ToDo:</strong> Implementing simple class Number.</p>
-<p><strong>Learn:</strong> Running the tests and find out the approach we are going to use.</p>
-<p><strong>Working directory:</strong>  <a class="reference external" href="https://github.com/An4ik/Python-TDD/tree/master/baby_steps">**baby_steps**</a></p>
-<div class="section" id="find-minimum">
-<h2>Find minimum.<a class="headerlink" href="#find-minimum" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="magic-functions">
+<h1>Magic functions<a class="headerlink" href="#magic-functions" title="Permalink to this headline">¶</a></h1>
+<p>Here we have description. bla bla bla.
+Magic function is a function ….</p>
+<p><strong>ToDo:</strong> Implementing simple functions.</p>
+<p><strong>Learn:</strong> Magic functions.</p>
+<p><strong>Working directory:</strong>  <a class="reference external" href="https://github.com/An4ik/Python-TDD/tree/master/magic_functions">**magic_functions**</a></p>
+<div class="section" id="number">
+<h2>Number<a class="headerlink" href="#number" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">Look at the file <strong>find_min.py</strong>.</p>
+<li><p class="first">Look at the file <strong>number.py</strong>.</p>
 </li>
-<li><p class="first">To follow TDD the first thing you have to do is to write tests for the given functions. Fortunately for you I’ve already created tests. (<strong>tests/test_find_min.py</strong>)</p>
+<li><p class="first">We have tests in (<strong>tests/test_number.py</strong>)</p>
 </li>
 <li><p class="first">Run tests:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">tests</span><span class="o">/</span><span class="n">test_find_min</span><span class="o">.</span><span class="n">py</span>
-<span class="c1"># Runs 7 tests and all of them are FAILED (failures=7)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">tests</span><span class="o">/</span><span class="n">test_number</span><span class="o">.</span><span class="n">py</span>
+<span class="c1"># Runs 12 tests and all of them are FAILED (failures=12)</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">Now, complete the first failed function in <strong>find_min.py</strong>.</p>
+<li><p class="first">Now, complete the first failed function in <strong>number.py</strong>.</p>
 </li>
 <li><p class="first">Run the tests <em>(step 3)</em> and make sure you have +1 passed test.</p>
 </li>
 <li><p class="first">Repeat the steps <em>4 and 5</em> until all of them are passed.</p>
 </li>
-<li><p class="first">Compare your answer with mine located in <strong>answers/find_min.py</strong></p>
+<li><p class="first">Compare your answer with mine located in <strong>answers/number.py</strong></p>
 </li>
 </ol>
 <p>You can commit your changes</p>
-</div>
-<div class="section" id="find-maximum">
-<h2>Find maximum.<a class="headerlink" href="#find-maximum" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
-<li><p class="first">Look at the file <strong>find_max.py</strong>.</p>
-</li>
-<li><p class="first">To follow TDD the first thing you have to do is to write tests for the given functions. Fortunately for you I’ve already created tests. (<strong>tests/test_find_max.py</strong>)</p>
-</li>
-<li><p class="first">Run tests:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">tests</span><span class="o">/</span><span class="n">test_find_max</span><span class="o">.</span><span class="n">py</span>
-<span class="c1"># Runs 7 tests and all of them are FAILED (failures=7)</span>
-</pre></div>
-</div>
-</li>
-<li><p class="first">Now, complete the first failed function in <strong>find_max.py</strong>.</p>
-</li>
-<li><p class="first">Run the tests <em>(step 3)</em> and make sure you have +1 passed test.</p>
-</li>
-<li><p class="first">Repeat the steps <em>4 and 5</em> until all of them are passed.</p>
-</li>
-<li><p class="first">Compare your answer with mine located in <strong>answers/find_max.py</strong></p>
-</li>
-</ol>
-<p>You can commit your changes and smile! You’ve done good job.</p>
 </div>
 </div>
 
@@ -216,10 +192,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="magic_functions.html" class="btn btn-neutral float-right" title="Magic functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="fibonacci_numbers.html" class="btn btn-neutral float-right" title="Fibonacci numbers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="introduction.html" class="btn btn-neutral" title="Hello Python, Hi TDD!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="baby_steps.html" class="btn btn-neutral" title="Baby steps" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

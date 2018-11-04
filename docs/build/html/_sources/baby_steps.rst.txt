@@ -2,7 +2,7 @@ Baby steps
 ^^^^^^^^^^^
 Here we have description. bla bla bla.
 
-**ToDo:** Implementing simple functions.
+**ToDo:** Implementing simple class Number.
 
 **Learn:** Running the tests and find out the approach we are going to use.
 
