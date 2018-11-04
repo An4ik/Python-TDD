@@ -8,7 +8,7 @@ Modulus
 
    introduction
    baby_steps
-   basic_math_operations
+   magic_functions
    fibonacci_numbers
    decorators
 

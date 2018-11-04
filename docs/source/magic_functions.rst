@@ -1,8 +1,8 @@
-Basic Math Operaions
-^^^^^^^^^^^^^^^^^^^^^^
+Magic functions
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Here we have description. bla bla bla.
-Magic functions
+Magic function is a function ....
 
 **ToDo:** Implementing simple functions.
 
@@ -11,7 +11,7 @@ Magic functions
 **Working directory:**  `**magic_functions** <https://github.com/An4ik/Python-TDD/tree/master/magic_functions>`_
 
 
-Number.
+Number
 -------------
 
 1. Look at the file **number.py**.

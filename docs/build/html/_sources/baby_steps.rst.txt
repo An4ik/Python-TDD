@@ -19,7 +19,7 @@ Find minimum.
 3. Run tests::
 
     python3 -m unittest tests/test_find_min.py
-    # Rans 7 tests and all of them are FAILED (failures=7)
+    # Runs 7 tests and all of them are FAILED (failures=7)
 
 4. Now, complete the first failed function in **find_min.py**.
 
@@ -47,7 +47,7 @@ Find maximum.
 3. Run tests::
 
     python3 -m unittest tests/test_find_max.py
-    # Rans 7 tests and all of them are FAILED (failures=7)
+    # Runs 7 tests and all of them are FAILED (failures=7)
 
 4. Now, complete the first failed function in **find_max.py**.
 

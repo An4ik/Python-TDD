@@ -35,7 +35,7 @@ Here are the four steps required to do the TDD which one should remember by hear
 You are lucky
 ---------------------
 Fortunately for you we have written tests for your tasks. So you will start your cycle
-from the *second* one. **[step-2, step-3, step-4]** *<next>* **[2, 3, 4]** *<next>*
+from the *second* step. **[step-2, step-3, step-4]** *<next>* **[2, 3, 4]** *<next>*
 **[2, 3, 4]** ...
 
 
