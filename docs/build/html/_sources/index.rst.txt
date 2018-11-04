@@ -11,7 +11,7 @@ So here you will learn and practice how to write custom *decorator*,
 *iterator*, *context manager* etc. Hope that you will enjoy it.
 
 
-What TDD does mean?
+What is TDD?
 +++++++++++++++++++++
 `TDD (Test Driven Development) <https://en.wikipedia.org/wiki/Test-driven_development/>`_
 - is a software development process that relies on the repetition of a very short
@@ -44,16 +44,30 @@ How?
 Every module have the next structure:
 ::
 
-| project
+| module
 | ├── answers               (our implementation)
 | │   └── program.py
 | ├── tests                 (tests)
 | │   ├── test_program.py
 | ├── program.py            (your implementation)
-| ├── instruction.md        (instruction how to run test)
+| ├── instruction.md        (what to do and how to run test)
+
+
+***.py** - *program.py* and all files in the root directory are empty classes, functions you have to
+implement.
+
+**tests** - *test_\*\.py* tests you have to run without failure (since there is no implementations
+all of the failed)
+
+**answers** - Our implementation. After all tests are passed you can compare with our solution.
 
 .. toctree::
    :maxdepth: 2
 
    baby_steps
+   basic_math_operations
+   fibonacci_numbers
+   decorators
+
+
 

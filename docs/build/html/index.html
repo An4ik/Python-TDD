@@ -43,8 +43,8 @@ have basic experience with this language.</p>
 <p>So here you will learn and practice how to write custom <em>decorator</em>,
 <em>iterator</em>, <em>context manager</em> etc. Hope that you will enjoy it.</p>
 </div>
-<div class="section" id="what-tdd-does-mean">
-<h2>What TDD does mean?<a class="headerlink" href="#what-tdd-does-mean" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-tdd">
+<h2>What is TDD?<a class="headerlink" href="#what-is-tdd" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Test-driven_development/">TDD (Test Driven Development)</a>
 - is a software development process that relies on the repetition of a very short
 development cycle:  requirements are turned into very specific test cases, then the
@@ -73,18 +73,26 @@ from the <em>second</em> one. <strong>[step-2, step-3, step-4]</strong> <em>&lt;
 <div class="section" id="how">
 <h2>How?<a class="headerlink" href="#how" title="Permalink to this headline">¶</a></h2>
 <p>Every module have the next structure:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>| project
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>| module
 | ├── answers               (our implementation)
 | │   └── program.py
 | ├── tests                 (tests)
 | │   ├── test_program.py
 | ├── program.py            (your implementation)
-| ├── instruction.md        (instruction how to run test)
+| ├── instruction.md        (what to do and how to run test)
 </pre></div>
 </div>
+<p><strong>*.py</strong> - <em>program.py</em> and all files in the root directory are empty classes, functions you have to
+implement.</p>
+<p><strong>tests</strong> - <em>test_*.py</em> tests you have to run without failure (since there is no implementations
+all of the failed)</p>
+<p><strong>answers</strong> - Our implementation. After all tests are passed you can compare with our solution.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="baby_steps.html">Baby steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_math_operations.html">Basic Math Operaions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fibonacci_numbers.html">Fibonacci numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">Decorators</a></li>
 </ul>
 </div>
 </div>
@@ -109,6 +117,9 @@ from the <em>second</em> one. <strong>[step-2, step-3, step-4]</strong> <em>&lt;
 <h3>Navigation</h3>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="baby_steps.html">Baby steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_math_operations.html">Basic Math Operaions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fibonacci_numbers.html">Fibonacci numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">Decorators</a></li>
 </ul>
 
 <div class="relations">
