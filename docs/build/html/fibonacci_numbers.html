@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Fibonacci numbers &mdash; Python-TDD 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Decorators" href="decorators.html" />
+    <link rel="prev" title="Magic functions" href="magic_functions.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Python-TDD
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Hello Python, Hi TDD!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baby_steps.html">Baby steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="magic_functions.html">Magic functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Fibonacci numbers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="decorators.html">Decorators</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python-TDD</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Fibonacci numbers</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/fibonacci_numbers.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fibonacci-numbers">
+<h1>Fibonacci numbers<a class="headerlink" href="#fibonacci-numbers" title="Permalink to this headline">¶</a></h1>
+<p>The <strong>Fibonacci numbers</strong> are the numbers in the following integer sequence
+characterized by the fact that every number after the first two is the sum
+of the two preceding ones:</p>
+<p>HELLO GUYS THIS IS DOCS</p>
+<p>For example:</p>
+<blockquote>
+<div>[0, 1, 1, 2, 3, 5, 8 …]</div></blockquote>
+<p>We want you write  <strong>Fibonacci class</strong> that realize two implementation:</p>
+<ol class="arabic simple">
+<li>Recursive</li>
+<li>Dynamic</li>
+</ol>
+<p>### Part-1. Dynamic implementation
+1. Look at the file <strong>dynamic.py</strong>.</p>
+<ol class="arabic" start="2">
+<li><p class="first">Run tests: (you will see that all of them FAILED)</p>
+<blockquote>
+<div><p>python3 -m unittest tests/dynamic_fibonacci_test.py</p>
+</div></blockquote>
+</li>
+<li><p class="first">Now, implement Fibonacci class, methods in <strong>dynamic.py</strong></p>
+</li>
+<li><p class="first">After running tests all of them should be passed.</p>
+</li>
+<li><p class="first">Compare your answer with mine located in answers/dynamic_fibonacci.py</p>
+</li>
+</ol>
+<p>### Part-2. Recursive implementation
+1. Look at the file <strong>brute_force.py</strong>.
+2. Run tests: (you will see that all of them FAILED)</p>
+<blockquote>
+<div>python3 -m unittest tests/brute_force_fibonacci_test.py</div></blockquote>
+<ol class="arabic simple" start="3">
+<li>Now, complete <strong>brute_force_fibonacci.py</strong></li>
+<li>After running tests all of them should be passed.</li>
+<li>Compare your answer with mine located in answers/brute_force_fibonacci.py</li>
+</ol>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="decorators.html" class="btn btn-neutral float-right" title="Decorators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="magic_functions.html" class="btn btn-neutral" title="Magic functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Akhmetov Anuar
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
