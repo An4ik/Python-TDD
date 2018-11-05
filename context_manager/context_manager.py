@@ -1,58 +1,48 @@
-#Here write your imports
-import os
-from contextlib import contextmanager
+"""
+Imports.
+"""
 
 
 def simple_open_and_write_without_context_manager(filename):
-    '''
-        Write 'simple open and write done!' into first.txt, but take fitst.txt as argumant.
-        Dont forget to close.
-	3 lines
-    '''
+    """
+    Writes 'simple open and write done!' into first.txt.
+    """
     if(f.closed):
         return True
-    else:
-        return False
+    return False
 
     
 def simple_open_and_write_with_context_manager(filename):
-    '''
-	Write 'write with context manager done!' into second.txt, but take second.txt as argument.	
-	2 lines
-    '''
+    """
+	  Writes 'write with context manager done!' into second.txt.
+    """
     if(f.closed):
         return True
-    else:
-        return False
+    return False
         
 @contextmanager
 def open_file(file, mode):
-    '''
-	Write more complicated version of context manager.
-	Now open_file() must replace open() that we used before.
-	Use here open(), yeild, close().
-	3 lines.
-    '''
+    """
+  	More complicated version of context manager.
+	  open_file() replaces open() that was used before.
+    """
         
 def check_open_file(filename):
-    '''
-	Write 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' into third.txt, but take third.txt as argument.	
-	Use open_file().
-	2 lines.
-    '''
+    """
+    Writes 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' into third.txt with open_file().
+    """
     if(f.closed):
         return True
-    else:
-        return False
+    return False
         
 
 
 def change_dir_without_context_manager(filename1, filename2):
-    '''
-	Give list1 the list of files in file_one.
-	Give list2 the list of files in file_two.
-	Use os, getcwd, chdir
-    '''
+    """
+    Gives list1 the list of files in file_one.
+    Gives list2 the list of files in file_two.
+    Uses os, getcwd, chdir
+    """
     return list1 + list2
 
 
@@ -60,20 +50,28 @@ def change_dir_without_context_manager(filename1, filename2):
         
 @contextmanager
 def change_dir(filename):
-    '''
-	Here you dont need to list files, 
-	couse you are writing your oun context manager that will help you to switch between directries.
-	Don't forget to use try, Finally, yield.
-    '''
+    """
+    Context manager that switches between directries with try, Finally, yield.
+    """
 
 def try_change_dir(filename):
-    '''
-	Return list of files in filename using change_dir that you wrote
-    '''
+    """
+  	Returns list of files in filename using change_dir.
+    """
 
 def read_file(filename):
     with open(filename, 'r') as f:
         for line in f:
             return format(line)
             
-
+simple_open_and_write_without_context_manager('first.txt')
+simple_open_and_write_with_context_manager('second.txt')
+check_open_file('third.txt')
+print(change_dir_without_context_manager('file_one','file_two'))
+print(change_dir_without_context_manager('file_one','file_one'))
+print(change_dir_without_context_manager('file_two','file_two'))
+print(try_change_dir('file_one'))
+print(try_change_dir('file_two'))
+read_file('first.txt')
+read_file('second.txt')
+read_file('third.txt')

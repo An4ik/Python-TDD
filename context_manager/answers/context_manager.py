@@ -18,7 +18,7 @@ def simple_open_and_write_with_context_manager(filename):
     else:
         return False
         
-#### Using contextlib ####
+
 @contextmanager
 def open_file(file, mode):
     f = open(file, mode)
@@ -33,7 +33,7 @@ def check_open_file(filename):
     else:
         return False
         
-#### CD Example ####
+
 def change_dir_without_context_manager(filename1, filename2):
     cwd = os.getcwd()
     os.chdir(filename1)
