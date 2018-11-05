@@ -11,8 +11,6 @@ For example:
     [0, 1, 1, 2, 3, 5, 8 ...]
 
 
-![Image of Yaktocat](https://www.mathsisfun.com/numbers/images/fibonacci-spiral.svg)
-
 
 We want you write  **Fibonacci class** that realize two implementation:
 
