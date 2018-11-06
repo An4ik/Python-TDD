@@ -16,12 +16,12 @@ def register(is_active=True):
 
 
 def subject_1():
-    pass
+    """Do nothing."""
 
 
 def subject_2():
-    pass
+    """Do nothing."""
 
 
 def subject_3():
-    pass
+    """Do nothing."""
