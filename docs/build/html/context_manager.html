@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Modulus &mdash; Python-TDD 0.0.1 documentation</title>
+  <title>Context manager &mdash; Python-TDD 0.0.1 documentation</title>
   
 
   
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Hello Python, Hi TDD!" href="introduction.html" /> 
+    <link rel="prev" title="Decorators" href="decorators.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -47,7 +47,7 @@
           
 
           
-            <a href="#" class="icon icon-home"> Python-TDD
+            <a href="index.html" class="icon icon-home"> Python-TDD
           
 
           
@@ -77,13 +77,17 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Hello Python, Hi TDD!</a></li>
 <li class="toctree-l1"><a class="reference internal" href="baby_steps.html">Baby steps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="magic_functions.html">Magic functions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="fibonacci_numbers.html">Fibonacci numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decorators.html">Decorators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="context_manager.html">Context manager</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Context manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#level-1">LEVEL-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#level-2">LEVEL-2</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -98,7 +102,7 @@
       <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Python-TDD</a>
+          <a href="index.html">Python-TDD</a>
         
       </nav>
 
@@ -127,15 +131,15 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="#">Docs</a> &raquo;</li>
+      <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>Modulus</li>
+      <li>Context manager</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/context_manager.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -148,33 +152,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="modulus">
-<h1>Modulus<a class="headerlink" href="#modulus" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="introduction.html">Hello Python, Hi TDD!</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#introduction">Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#what-is-tdd">What is TDD?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="introduction.html#module-structure">Module structure</a></li>
-</ul>
+  <div class="section" id="context-manager">
+<h1>Context manager<a class="headerlink" href="#context-manager" title="Permalink to this headline">¶</a></h1>
+<p><strong>ToDo:</strong> Read about context manager. Pass three levels for a better understanding.</p>
+<p><strong>Learn:</strong> Context manager</p>
+<p><strong>Working directory:</strong>  <a class="reference external" href="https://github.com/An4ik/Python-TDD/tree/master/context_manager">**context_manager**</a></p>
+<p><strong>Context managers</strong> are a way of allocating and releasing some sort of resource exactly where you need it. The most widely used example of context managers is the ‘with’ statement.</p>
+<p>If you forget to close the file or let’s say the database, it will later lead to big consequences. But with context manager, you don’t need to remember this, it will close everything for you.</p>
+<p>We can implement context manager as generator:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">contextlib</span> <span class="k">import</span> <span class="n">contextmanager</span>
+<span class="nd">@contextmanager</span>
+</pre></div>
+</div>
+<p>or as class by using magic functions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="fm">__init__</span>
+<span class="fm">__enter__</span>
+<span class="fm">__exit__</span>
+</pre></div>
+</div>
+<p>We want you to pass three levels for a better understanding of <strong>context manager</strong></p>
+<div class="section" id="level-1">
+<h2>LEVEL-1<a class="headerlink" href="#level-1" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Look at the file write_into_file.py</p>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="baby_steps.html">Baby steps</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="baby_steps.html#find-minimum">Find minimum.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="baby_steps.html#find-maximum">Find maximum.</a></li>
-</ul>
+<li><p class="first">Look at the tests in tests folter</p>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="magic_functions.html">Magic functions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="magic_functions.html#number">Number</a></li>
-</ul>
+<li><p class="first">Run tests with command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">tests</span><span class="o">/</span><span class="n">tests_for_level_one</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>As you see all your tests are failed</p>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="fibonacci_numbers.html">Fibonacci numbers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="decorators.html">Decorators</a></li>
-<li class="toctree-l1"><a class="reference internal" href="context_manager.html">Context manager</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="context_manager.html#level-1">LEVEL-1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="context_manager.html#level-2">LEVEL-2</a></li>
-</ul>
+<li><p class="first">Now, complete the functions in write_into_file.py</p>
 </li>
-</ul>
+<li><p class="first">Run tests and all of them should be passed.</p>
+</li>
+<li><p class="first">Compare your answer with mine located in answers/write_into_file.py</p>
+</li>
+<li><p class="first">Congratulations, you have passed first level. Commit and push your changes.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="level-2">
+<h2>LEVEL-2<a class="headerlink" href="#level-2" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -186,8 +207,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="introduction.html" class="btn btn-neutral float-right" title="Hello Python, Hi TDD!" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
+        <a href="decorators.html" class="btn btn-neutral" title="Decorators" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

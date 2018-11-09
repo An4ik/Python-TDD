@@ -11,6 +11,7 @@ Modulus
    magic_functions
    fibonacci_numbers
    decorators
+   context_manager
 
 
 
