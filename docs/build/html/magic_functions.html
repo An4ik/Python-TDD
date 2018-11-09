@@ -87,6 +87,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="fibonacci_numbers.html">Fibonacci numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decorators.html">Decorators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="context_manager.html">Context manager</a></li>
 </ul>
 
             
@@ -153,9 +154,10 @@
             
   <div class="section" id="magic-functions">
 <h1>Magic functions<a class="headerlink" href="#magic-functions" title="Permalink to this headline">¶</a></h1>
-<p>Here we have description. bla bla bla.
-Magic function is a function ….</p>
-<p><strong>ToDo:</strong> Implementing simple functions.</p>
+<p><strong>Magic function</strong> is a function that you deal with, especially, when you are working with classes and objects. These functions are similar to ordinary functions, but the main difference is that they don’t have to be called directly as other created methods.
+Magic function’s name starts and ends with double underscores (<em>__</em>). For example, __init__(), __str__(), etc.
+These methods allow us to emulate built-in types or implement operator overloading. For example, when you want to add two objects of the same type, you can just implement magic function __add__() and use binary operator ‘+’ to add them, instead of creating special method with arguments and call it.
+<strong>ToDo:</strong> Implementing simple functions.</p>
 <p><strong>Learn:</strong> Magic functions.</p>
 <p><strong>Working directory:</strong>  <a class="reference external" href="https://github.com/An4ik/Python-TDD/tree/master/magic_functions">**magic_functions**</a></p>
 <div class="section" id="number">
