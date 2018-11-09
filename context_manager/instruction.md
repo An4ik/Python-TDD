@@ -6,7 +6,7 @@
 
 3. Run tests with command:
 
-    ```python3 -m unittest tests/tests_for_level_one.py```
+    ```python3 -m unittest tests/test_write_into_file.py```
     
    As you see all your tests are failed
 
