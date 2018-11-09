@@ -92,10 +92,13 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#stringify">Stringify</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id1">What you need to know about functions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id2">Assign functions to variables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-s-decorator-syntax">Python’s Decorator Syntax</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#composition-of-decorators">Composition of Decorators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#debugging-decorated-functions">Debugging decorated functions</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#registration">Registration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="context_manager.html">Context manager</a></li>
@@ -165,12 +168,17 @@
             
   <div class="section" id="decorators">
 <h1>Decorators<a class="headerlink" href="#decorators" title="Permalink to this headline">¶</a></h1>
-<p>Decorator - is a function that get function as an argument and returns function.</p>
+<p>Decorator - dynamically alter the functionality of a function, method, or class
+without having to directly use subclasses or change the source code of the
+function being decorated.</p>
 <dl class="docutils">
 <dt><strong>ToDo:</strong></dt>
-<dd>1. Read about functions and decorators.
-1. Implementing simple decorator.
-2. Implementing decorator with arguments.</dd>
+<dd><ol class="first last arabic simple">
+<li>Research &amp; Read about functions and decorators.</li>
+<li>Implement simple decorator.</li>
+<li>Implement decorator with arguments.</li>
+</ol>
+</dd>
 </dl>
 <p><strong>Learn:</strong> Decorator.</p>
 <p><strong>Working directory:</strong>  <a class="reference external" href="https://github.com/An4ik/Python-TDD/tree/master/decorator">**decorator**</a></p>
@@ -242,7 +250,7 @@ inner function and return the new function.</p>
 <div class="section" id="stringify">
 <h2>Stringify<a class="headerlink" href="#stringify" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">Look at the file <strong>stringify.py</strong>.</p>
+<li><p class="first">Look at the file <a class="reference external" href="https://github.com/An4ik/Python-TDD/blob/master/decorator/stringify.py/">stringify.py</a></p>
 </li>
 <li><p class="first">Run tests:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">tests</span><span class="o">/</span><span class="n">test_stringify</span><span class="o">.</span><span class="n">py</span>
@@ -259,23 +267,115 @@ inner function and return the new function.</p>
 </ol>
 <p>You can commit your changes</p>
 </div>
-<div class="section" id="id1">
-<h2>What you need to know about functions<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<p>Before diving in, there are some prerequisites that should be clear.
-In Python, functions are first class citizens, they are objects and
-that means we can do a lot of useful stuff with them.</p>
-<div class="section" id="id2">
-<h3>Assign functions to variables<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
-    <span class="k">return</span> <span class="s2">&quot;hello &quot;</span> <span class="o">+</span> <span class="n">name</span>
+<div class="section" id="python-s-decorator-syntax">
+<h2>Python’s Decorator Syntax<a class="headerlink" href="#python-s-decorator-syntax" title="Permalink to this headline">¶</a></h2>
+<p>Python makes creating and using decorators a bit cleaner and nicer for
+the programmer through some syntactic sugar To decorate get_text we don’t
+have to get_text = p_decorator(get_text) There is a neat shortcut for that,
+which is to mention the name of the decorating function before the function
+to be decorated. The name of the decorator should be perpended with an &#64; symbol.</p>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">p_decorate</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">func_wrapper</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;p&gt;</span><span class="si">{0}</span><span class="s2">&lt;/p&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">func_wrapper</span>
 
-<span class="n">greet_someone</span> <span class="o">=</span> <span class="n">greet</span>
-<span class="nb">print</span> <span class="p">(</span><span class="n">greet_someone</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">))</span>
+<span class="nd">@p_decorate</span>
+<span class="k">def</span> <span class="nf">get_text</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+   <span class="k">return</span> <span class="s2">&quot;lorem ipsum, </span><span class="si">{0}</span><span class="s2"> dolor sit amet&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
 
-<span class="c1"># Outputs: hello John</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">get_text</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">))</span>
+<span class="c1"># Outputs &lt;p&gt;lorem ipsum, John dolor sit amet&lt;/p&gt;</span>
 </pre></div>
 </div>
 </div>
+<div class="section" id="composition-of-decorators">
+<h3>Composition of Decorators<a class="headerlink" href="#composition-of-decorators" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">p_decorate</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">func_wrapper</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+       <span class="k">return</span> <span class="s2">&quot;&lt;p&gt;</span><span class="si">{0}</span><span class="s2">&lt;/p&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">func_wrapper</span>
+
+<span class="k">def</span> <span class="nf">strong_decorate</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">func_wrapper</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;strong&gt;</span><span class="si">{0}</span><span class="s2">&lt;/strong&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">func_wrapper</span>
+
+<span class="k">def</span> <span class="nf">div_decorate</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">func_wrapper</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;&lt;div&gt;</span><span class="si">{0}</span><span class="s2">&lt;/div&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">func_wrapper</span>
+
+<span class="n">get_text</span> <span class="o">=</span> <span class="n">div_decorate</span><span class="p">(</span><span class="n">p_decorate</span><span class="p">(</span><span class="n">strong_decorate</span><span class="p">(</span><span class="n">get_text</span><span class="p">)))</span>
+<span class="nb">print</span> <span class="n">get_text</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">)</span>
+
+<span class="c1"># Or pythonic approach</span>
+<span class="nd">@div_decorate</span>
+<span class="nd">@p_decorate</span>
+<span class="nd">@strong_decorate</span>
+<span class="k">def</span> <span class="nf">get_text</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+   <span class="k">return</span> <span class="s2">&quot;lorem ipsum, </span><span class="si">{0}</span><span class="s2"> dolor sit amet&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="nb">print</span> <span class="n">get_text</span><span class="p">(</span><span class="s2">&quot;John&quot;</span><span class="p">)</span>
+<span class="c1"># Both output &lt;div&gt;&lt;p&gt;&lt;strong&gt;lorem ipsum, John dolor sit amet&lt;/strong&gt;&lt;/p&gt;&lt;/div&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="debugging-decorated-functions">
+<h3>Debugging decorated functions<a class="headerlink" href="#debugging-decorated-functions" title="Permalink to this headline">¶</a></h3>
+<p>At the end of the day decorators are just wrapping our functions, in case of
+debugging that can be problematic since the wrapper function does not carry
+the name, module and docstring of the original function. Based on the example
+above if we do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">get_text</span><span class="o">.</span><span class="vm">__name__</span>
+<span class="c1"># Outputs func_wrapper</span>
+</pre></div>
+</div>
+<p>The output was expected to be get_text yet, the attributes __name__, __doc__,
+and __module__ of get_text got overridden by those of the wrapper(func_wrapper).
+Obviously we can reset them within func_wrapper but Python provides a much nicer way.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">wraps</span>
+
+<span class="k">def</span> <span class="nf">tags</span><span class="p">(</span><span class="n">tag_name</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">tags_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">func_wrapper</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+            <span class="k">return</span> <span class="s2">&quot;&lt;</span><span class="si">{0}</span><span class="s2">&gt;</span><span class="si">{1}</span><span class="s2">&lt;/</span><span class="si">{0}</span><span class="s2">&gt;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">tag_name</span><span class="p">,</span> <span class="n">func</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">func_wrapper</span>
+    <span class="k">return</span> <span class="n">tags_decorator</span>
+
+<span class="nd">@tags</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">get_text</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;returns some text&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s2">&quot;Hello &quot;</span><span class="o">+</span><span class="n">name</span>
+
+<span class="nb">print</span> <span class="n">get_text</span><span class="o">.</span><span class="vm">__name__</span> <span class="c1"># get_text</span>
+<span class="nb">print</span> <span class="n">get_text</span><span class="o">.</span><span class="vm">__doc__</span> <span class="c1"># returns some text</span>
+<span class="nb">print</span> <span class="n">get_text</span><span class="o">.</span><span class="vm">__module__</span> <span class="c1"># __main__</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="registration">
+<h2>Registration<a class="headerlink" href="#registration" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">Look at the file <a class="reference external" href="https://github.com/An4ik/Python-TDD/blob/master/decorator/registration.py/">registration.py</a></p>
+</li>
+<li><p class="first">Run tests:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">tests</span><span class="o">/</span><span class="n">test_registration</span><span class="o">.</span><span class="n">py</span>
+<span class="c1"># Runs 4 tests and all of them are FAILED (failures=4)</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<ol class="arabic simple" start="4">
+<li>Now, complete the first failed function in <strong>registration.py</strong>.</li>
+<li>Run the tests <em>(step 3)</em> and make sure you have +1 passed test.</li>
+<li>Repeat the steps <em>4 and 5</em> until all of them are passed.</li>
+<li>Compare your answer with mine located in <strong>answers/registration.py</strong></li>
+</ol>
+<p>You can commit your changes</p>
 </div>
 </div>
 
