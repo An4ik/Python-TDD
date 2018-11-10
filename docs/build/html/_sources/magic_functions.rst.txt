@@ -4,6 +4,7 @@ Magic functions
 **Magic function** is a function that you deal with, especially, when you are working with classes and objects. These functions are similar to ordinary functions, but the main difference is that they don't have to be called directly as other created methods.  
 Magic function's name starts and ends with double underscores (*__*). For example, __init__(), __str__(), etc. 
 These methods allow us to emulate built-in types or implement operator overloading. For example, when you want to add two objects of the same type, you can just implement magic function __add__() and use binary operator '+' to add them, instead of creating special method with arguments and call it. 
+
 **ToDo:** Implementing simple functions.
 
 **Learn:** Magic functions.

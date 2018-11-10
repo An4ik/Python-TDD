@@ -18,7 +18,6 @@ def stringify(func):
     return inner
 
 
-@stringify
 def add(a, b):
     """
     Decorated function which returns the sum of two numbers.
@@ -27,10 +26,15 @@ def add(a, b):
     return a + b
 
 
-@stringify
+add = stringify(add)
+
+
 def multiply(a, b):
     """
     Decorated function which returns the multiplication of two numbers.
     """
 
     return a * b
+
+
+multiply = stringify(multiply)

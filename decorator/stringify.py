@@ -13,8 +13,8 @@ def stringify(func):
 
 
 def add(a, b):
-    """Decorated function which returns the sum of two numbers."""
+    """Returns the sum of two numbers."""
 
 
 def multiply(a, b):
-    """Decorated function which returns the multiplication of two numbers."""
+    """Returns the multiplication of two numbers."""
