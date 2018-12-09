@@ -6,7 +6,7 @@ from write_into_file import (
     read_file
 )
 
-class LevelOneTest(TestCase):
+class LevelTwoTest(TestCase):
     def test_write_without(self):
         result = write_without_context_manager('first.txt')
         self.assertEqual(result, True)
