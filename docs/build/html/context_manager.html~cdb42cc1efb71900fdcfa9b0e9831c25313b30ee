@@ -84,8 +84,9 @@
 <li class="toctree-l1"><a class="reference internal" href="fibonacci_numbers.html">Fibonacci numbers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="decorators.html">Decorators</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Context manager</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#level-1">LEVEL-1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#context-manager-as-class">Context manager as class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#write-into-file">Write into file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#change-directory">Change directory</a></li>
 </ul>
 </li>
 </ul>
@@ -171,9 +172,8 @@
 </pre></div>
 </div>
 <p>We want you to pass three levels for a better understanding of <strong>context manager</strong></p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</p>
-<div class="section" id="level-1">
-<h2>LEVEL-1<a class="headerlink" href="#level-1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="context-manager-as-class">
+<h2>Context manager as class<a class="headerlink" href="#context-manager-as-class" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Look at the file context_manager_as_class.py</p>
 </li>
@@ -197,27 +197,29 @@
 </div>
 <div class="section" id="write-into-file">
 <h2>Write into file<a class="headerlink" href="#write-into-file" title="Permalink to this headline">¶</a></h2>
-<p>&gt;&gt;&gt;&gt;&gt;&gt;&gt; cdb42cc1efb71900fdcfa9b0e9831c25313b30ee</p>
-<ol class="arabic simple">
-<li>Look at the file write_into_file.py</li>
-<li>Look at the tests in tests folter</li>
-<li>Run tests with command:</li>
+<ol class="arabic">
+<li><p class="first">Look at the file write_into_file.py</p>
+</li>
+<li><p class="first">Look at the tests in tests folter</p>
+</li>
+<li><p class="first">Run tests with command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">unittest</span> <span class="n">tests</span><span class="o">/</span><span class="n">tests_write_into_file</span><span class="o">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>As you see all your tests are failed</p>
+</li>
+<li><p class="first">Now, complete the functions in write_into_file.py</p>
+</li>
+<li><p class="first">Run tests and all of them should be passed.</p>
+</li>
+<li><p class="first">Compare your answer with mine located in answers/write_into_file.py</p>
+</li>
+<li><p class="first">Congratulations, you have passed first level. Commit and push your changes.</p>
+</li>
 </ol>
-<dl class="docutils">
-<dt>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</dt>
-<dd>python3 -m unittest tests/tests_for_level_one.py</dd>
-</dl>
-<blockquote>
-<div>As you see all your tests are failed</div></blockquote>
-<ol class="arabic simple" start="4">
-<li>Now, complete the functions in write_into_file.py</li>
-<li>Run tests and all of them should be passed.</li>
-<li>Compare your answer with mine located in answers/write_into_file.py</li>
-<li>Congratulations, you have passed first level. Commit and push your changes.</li>
-</ol>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-LEVEL-2
-——-</p>
+</div>
+<div class="section" id="change-directory">
+<h2>Change directory<a class="headerlink" href="#change-directory" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
 <li><p class="first">Look at the file change_directory.py</p>
 </li>
@@ -235,9 +237,9 @@ LEVEL-2
 </li>
 <li><p class="first">Compare your answer with mine located in answers/change_directory.py</p>
 </li>
+<li><p class="first">Congratulations, you have passed second level. Commit and push your changes.</p>
+</li>
 </ol>
-<p>7. Congratulations, you have passed second level. Commit and push your changes.
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; cdb42cc1efb71900fdcfa9b0e9831c25313b30ee</p>
 </div>
 </div>
 
